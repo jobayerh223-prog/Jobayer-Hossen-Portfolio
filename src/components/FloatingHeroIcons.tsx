@@ -1,61 +1,50 @@
 import React from 'react';
 
-// Crisp, bespoke monochrome SVG icons in pure black
-const ClaudeIcon: React.FC<{ className?: string }> = ({ className = 'w-5 h-5' }) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-    <path d="M13.5 2.5L12 6.2L10.5 2.5H8.2L10.8 7.5L6 6.8V9L10.8 9.5L6.8 12.8L8.2 14.5L12 11.2L15.8 14.5L17.2 12.8L13.2 9.5L18 9V6.8L13.2 7.5L15.8 2.5H13.5ZM12 12.5L10.5 21.5H13.5L12 12.5Z" />
-  </svg>
-);
-
+// Real Official ChatGPT (OpenAI) Vector Logo
 const ChatGPTIcon: React.FC<{ className?: string }> = ({ className = 'w-5 h-5' }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-    <path d="M22.28 10.37a5.53 5.53 0 0 0-.44-4.22 5.63 5.63 0 0 0-4.89-2.82 5.57 5.57 0 0 0-2.3.5A5.57 5.57 0 0 0 10.1.75a5.62 5.62 0 0 0-4.66 2.56 5.58 5.58 0 0 0-3.6 2.62 5.62 5.62 0 0 0 .54 6.44 5.57 5.57 0 0 0-.48 4.22 5.63 5.63 0 0 0 4.89 2.82c.8 0 1.58-.17 2.3-.5a5.57 5.57 0 0 0 4.54 3.08 5.62 5.62 0 0 0 4.66-2.56 5.58 5.58 0 0 0 3.6-2.62 5.62 5.62 0 0 0-.54-6.44h-.13ZM12 14.28a2.28 2.28 0 1 1 0-4.56 2.28 2.28 0 0 1 0 4.56Zm-1.8-6.19a3.86 3.86 0 0 1 3.6 0l4.3 2.48a3.86 3.86 0 0 1 1.93 3.34v.32l-3.32-1.92a2.3 2.3 0 0 0-2.28 0l-4.23 2.44v-6.66Zm-5.74 3.31a3.86 3.86 0 0 1 1.8-3.41l4.3-2.48v6.66l-4.23 2.44a2.3 2.3 0 0 0-1.14 1.98v-.32a3.86 3.86 0 0 1-.73-4.87Zm1.44 7.62a3.86 3.86 0 0 1-.13-3.86l4.3 2.48v5.77a3.86 3.86 0 0 1-4.17-.53v-.32l3.32-1.92a2.3 2.3 0 0 0 1.14-1.98l-4.46-2.57v.93Zm7.9 3.41a3.86 3.86 0 0 1-3.6 0l-4.3-2.48a3.86 3.86 0 0 1-1.93-3.34v-.32l3.32 1.92a2.3 2.3 0 0 0 2.28 0l4.23-2.44v6.66Zm5.74-3.31a3.86 3.86 0 0 1-1.8 3.41l-4.3 2.48v-6.66l4.23-2.44a2.3 2.3 0 0 0 1.14-1.98v.32a3.86 3.86 0 0 1 .73 4.87Zm-1.44-7.62a3.86 3.86 0 0 1 .13 3.86l-4.3-2.48V3.19a3.86 3.86 0 0 1 4.17.53v.32l-3.32 1.92a2.3 2.3 0 0 0-1.14 1.98l4.46 2.57v-.93Z" />
+    <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.6667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z" />
   </svg>
 );
 
+// Real Official Claude AI Starburst Logo
+const ClaudeIcon: React.FC<{ className?: string }> = ({ className = 'w-5 h-5' }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+    <path d="M4.709 15.955l4.72-2.647.08-.23-.08-.128H9.2l-.79-.048-2.698-.073-2.339-.097-2.266-.122-.571-.121L0 11.784l.055-.352.48-.321.686.06 1.52.103 2.278.158 1.652.097 2.449.255h.389l.055-.157-.134-.098-.103-.097-2.358-1.596-2.552-1.688-1.336-.972-.724-.491-.364-.462-.158-1.008.656-.722.881.06.225.061.893.686 1.908 1.476 2.491 1.833.365.304.145-.103.019-.073-.164-.274-1.355-2.446-1.446-2.49-.644-1.032-.17-.619a2.97 2.97 0 01-.104-.729L6.283.134 6.696 0l.996.134.42.364.62 1.414 1.002 2.229 1.555 3.03.456.898.243.832.091.255h.158V9.01l.128-1.706.237-2.095.23-2.695.08-.76.376-.91.747-.492.584.28.48.685-.067.444-.286 1.851-.559 2.903-.364 1.942h.212l.243-.242.985-1.306 1.652-2.064.73-.82.85-.904.547-.431h1.033l.76 1.129-.34 1.166-1.064 1.347-.881 1.142-1.264 1.7-.79 1.36.073.11.188-.02 2.856-.606 1.543-.28 1.841-.315.833.388.091.395-.328.807-1.969.486-2.309.462-3.439.813-.042.03.049.061 1.549.146.662.036h1.622l3.02.225.79.522.474.638-.079.485-1.215.62-1.64-.389-3.829-.91-1.312-.329h-.182v.11l1.093 1.068 2.006 1.81 2.509 2.33.127.578-.322.455-.34-.049-2.205-1.657-.851-.747-1.926-1.62h-.128v.17l.444.649 2.345 3.521.122 1.08-.17.353-.608.213-.668-.122-1.374-1.925-1.415-2.167-1.143-1.943-.14.08-.674 7.254-.316.37-.729.28-.607-.461-.322-.747.322-1.476.389-1.924.315-1.53.286-1.9.17-.632-.012-.042-.14.018-1.434 1.967-2.18 2.945-1.726 1.845-.414.164-.717-.37.067-.662.401-.589 2.388-3.036 1.44-1.882.93-1.086-.006-.158h-.055L4.132 18.56l-1.13.146-.487-.456.061-.746.231-.243 1.908-1.312-.006.006z" />
+  </svg>
+);
+
+// Real Official Facebook Logo
+const FacebookIcon: React.FC<{ className?: string }> = ({ className = 'w-5 h-5' }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+  </svg>
+);
+
+// Real Official Google Gemini 4-Pointed Star
 const GeminiIcon: React.FC<{ className?: string }> = ({ className = 'w-5 h-5' }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
     <path d="M12 0C12 6.627 6.627 12 0 12C6.627 12 12 17.373 12 24C12 17.373 17.373 12 24 12C17.373 12 12 6.627 12 0Z" />
   </svg>
 );
 
-const GoogleAIStudioIcon: React.FC<{ className?: string }> = ({ className = 'w-5 h-5' }) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fillOpacity="0.15" />
-    <path d="M12 4L14.2 8.5L19 9.2L15.5 12.6L16.3 17.5L12 15.2L7.7 17.5L8.5 12.6L5 9.2L9.8 8.5L12 4Z" />
-    <circle cx="12" cy="12" r="2" fill="currentColor" />
-  </svg>
-);
-
-const AiChipIcon: React.FC<{ className?: string }> = ({ className = 'w-5 h-5' }) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
-    <rect x="4" y="4" width="16" height="16" rx="3" />
-    <path d="M9 9h6v6H9z" fill="currentColor" fillOpacity="0.2" />
-    <path d="M9 1h1v3H9zM14 1h1v3h-1zM9 20h1v3H9zM14 20h1v3h-1zM1 9h3v1H1zM1 14h3v1H1zM20 9h3v1h-3zM20 14h3v1h-3z" />
-    <path d="M9 12h6M12 9v6" strokeWidth="1.5" />
-  </svg>
-);
-
+// Branding / Vector Pen Tool
 const BrandingIcon: React.FC<{ className?: string }> = ({ className = 'w-5 h-5' }) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
-    <path d="m12 19 7-7 3 3-7 7-3-3z" fill="currentColor" fillOpacity="0.15" />
+    <path d="m12 19 7-7 3 3-7 7-3-3z" fill="currentColor" fillOpacity="0.18" />
     <path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
     <circle cx="9" cy="9" r="2" fill="currentColor" />
   </svg>
 );
 
-const XIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' }) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-  </svg>
-);
-
+// LinkedIn
 const LinkedInIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
   </svg>
 );
 
+// Instagram
 const InstagramIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' }) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
     <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -64,18 +53,14 @@ const InstagramIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4'
   </svg>
 );
 
-const TikTokIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' }) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.11V9.42a6.33 6.33 0 0 0-.86-.06 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.71a8.19 8.19 0 0 0 4.97 1.67V6.93a4.83 4.83 0 0 1-1.2-.24Z" />
-  </svg>
-);
-
+// YouTube
 const YouTubeIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
   </svg>
 );
 
+// Vibe Coding
 const VibeCodingIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' }) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
     <polyline points="16 18 22 12 16 6" />
@@ -100,93 +85,31 @@ interface FloatingIconItem {
 
 export const FloatingHeroIcons: React.FC = () => {
   const icons: FloatingIconItem[] = [
-    // 1. Claude AI (Upper Left)
+    // 1. Real Official ChatGPT (Moved inward on Upper Left)
     {
-      id: 'claude',
-      name: 'Claude 3.7',
-      category: 'Reasoning AI',
-      component: ClaudeIcon,
-      position: 'left-[4%] sm:left-[7%] xl:left-[9%] top-[19%]',
+      id: 'chatgpt',
+      name: 'ChatGPT',
+      category: 'OpenAI Engine',
+      component: ChatGPTIcon,
+      position: 'left-[10%] sm:left-[18%] lg:left-[20%] xl:left-[22%] top-[25%] sm:top-[22%]',
       sizeClasses: 'w-11 h-11 sm:w-13 sm:h-13',
       iconSizeClasses: 'w-6 h-6 sm:w-7 sm:h-7',
       animationClass: 'animate-hero-float-1',
       animationDelay: '0s',
     },
-    // 2. ChatGPT (Mid-High Left)
+    // 2. Real Official Claude AI (Moved down & inward beside portrait)
     {
-      id: 'chatgpt',
-      name: 'ChatGPT',
-      category: 'LLM Engine',
-      component: ChatGPTIcon,
-      position: 'left-[2%] sm:left-[4%] xl:left-[6%] top-[34%]',
-      sizeClasses: 'w-12 h-12 sm:w-14 sm:h-14',
-      iconSizeClasses: 'w-6 h-6 sm:w-7 sm:h-7',
-      animationClass: 'animate-hero-float-2',
-      animationDelay: '1.4s',
-    },
-    // 3. AI Neural Chip (Inner Upper-Left)
-    {
-      id: 'ai-chip',
-      name: 'AI Agent',
-      category: 'Autonomous Nodes',
-      component: AiChipIcon,
-      position: 'left-[20%] sm:left-[23%] xl:left-[26%] top-[23%]',
-      sizeClasses: 'w-9 h-9 sm:w-11 sm:h-11',
-      iconSizeClasses: 'w-5 h-5 sm:w-6 sm:h-6',
-      animationClass: 'animate-hero-float-3',
-      animationDelay: '0.8s',
-      hideOnMobile: true,
-    },
-    // 4. X / Twitter (Mid-Low Left)
-    {
-      id: 'x-twitter',
-      name: 'X (Twitter)',
-      category: 'Viral Reach',
-      component: XIcon,
-      position: 'left-[2.5%] sm:left-[5%] xl:left-[7%] top-[67%]',
-      sizeClasses: 'w-9 h-9 sm:w-10 sm:h-10',
-      iconSizeClasses: 'w-4 h-4 sm:w-5 sm:h-5',
-      animationClass: 'animate-hero-float-1',
-      animationDelay: '2.2s',
-    },
-    // 5. LinkedIn (Lower Left Flank)
-    {
-      id: 'linkedin',
-      name: 'LinkedIn',
-      category: 'B2B Authority',
-      component: LinkedInIcon,
-      position: 'left-[14%] sm:left-[16%] xl:left-[19%] top-[78%]',
-      sizeClasses: 'w-10 h-10 sm:w-11 sm:h-11',
-      iconSizeClasses: 'w-5 h-5 sm:w-5.5 sm:h-5.5',
-      animationClass: 'animate-hero-float-2',
-      animationDelay: '3.1s',
-      hideOnMobile: true,
-    },
-    // 6. Google AI Studio (Upper Right)
-    {
-      id: 'ai-studio',
-      name: 'Google AI Studio',
-      category: 'Gemini Pro / Flash',
-      component: GoogleAIStudioIcon,
-      position: 'right-[4%] sm:right-[7%] xl:right-[9%] top-[19%]',
+      id: 'claude',
+      name: 'Claude AI',
+      category: 'Anthropic Reasoning',
+      component: ClaudeIcon,
+      position: 'right-[20%] sm:right-[24%] lg:right-[29%] xl:right-[30%] top-[48%] lg:top-[44%]',
       sizeClasses: 'w-11 h-11 sm:w-13 sm:h-13',
       iconSizeClasses: 'w-6 h-6 sm:w-7 sm:h-7',
       animationClass: 'animate-hero-float-2',
-      animationDelay: '0.5s',
+      animationDelay: '0.6s',
     },
-    // 7. Gemini (Mid-High Right)
-    {
-      id: 'gemini',
-      name: 'Gemini 2.5',
-      category: 'Multimodal AI',
-      component: GeminiIcon,
-      position: 'right-[2%] sm:right-[4%] xl:right-[6%] top-[34%]',
-      sizeClasses: 'w-12 h-12 sm:w-14 sm:h-14',
-      iconSizeClasses: 'w-6 h-6 sm:w-7 sm:h-7',
-      animationClass: 'animate-hero-float-1',
-      animationDelay: '1.8s',
-    },
-    // 8. Branding / Vector Pen (Inner Upper-Right)
+    // 3. Branding / Vector Pen (Inner Upper Right)
     {
       id: 'branding',
       name: 'Branding Kit',
@@ -196,20 +119,70 @@ export const FloatingHeroIcons: React.FC = () => {
       sizeClasses: 'w-9 h-9 sm:w-11 sm:h-11',
       iconSizeClasses: 'w-5 h-5 sm:w-6 sm:h-6',
       animationClass: 'animate-hero-float-3',
-      animationDelay: '2.7s',
+      animationDelay: '2.5s',
       hideOnMobile: true,
     },
-    // 9. Instagram (Mid-Low Right)
+    // 4. Facebook (Mid-High Left)
+    {
+      id: 'facebook',
+      name: 'Facebook',
+      category: 'Social Growth & Meta',
+      component: FacebookIcon,
+      position: 'left-[2.5%] sm:left-[5%] xl:left-[7%] top-[45%]',
+      sizeClasses: 'w-11 h-11 sm:w-12 sm:h-12',
+      iconSizeClasses: 'w-5 h-5 sm:w-6 sm:h-6',
+      animationClass: 'animate-hero-float-2',
+      animationDelay: '1.8s',
+    },
+    // 5. Gemini (Moved to left flank beside portrait)
+    {
+      id: 'gemini',
+      name: 'Gemini 2.5',
+      category: 'Google DeepMind AI',
+      component: GeminiIcon,
+      position: 'left-[6%] sm:left-[28%] lg:left-[29%] xl:left-[30%] top-[62%] sm:top-[51%]',
+      sizeClasses: 'w-11 h-11 sm:w-13 sm:h-13',
+      iconSizeClasses: 'w-6 h-6 sm:w-7 sm:h-7',
+      animationClass: 'animate-hero-float-1',
+      animationDelay: '1.4s',
+    },
+    // 7. LinkedIn (Lower Left Flank)
+    {
+      id: 'linkedin',
+      name: 'LinkedIn',
+      category: 'B2B Authority',
+      component: LinkedInIcon,
+      position: 'left-[14%] sm:left-[16%] xl:left-[19%] top-[78%]',
+      sizeClasses: 'w-10 h-10 sm:w-11 sm:h-11',
+      iconSizeClasses: 'w-5 h-5 sm:w-5.5 sm:h-5.5',
+      animationClass: 'animate-hero-float-1',
+      animationDelay: '3.1s',
+      hideOnMobile: true,
+    },
+    // 8. Instagram (Mid-Low Right)
     {
       id: 'instagram',
       name: 'Instagram',
       category: 'Stop-The-Scroll',
       component: InstagramIcon,
-      position: 'right-[2.5%] sm:right-[5%] xl:right-[7%] top-[67%]',
+      position: 'right-[2.5%] sm:right-[5%] xl:right-[7%] top-[65%]',
       sizeClasses: 'w-9 h-9 sm:w-10 sm:h-10',
       iconSizeClasses: 'w-4 h-4 sm:w-5 sm:h-5',
       animationClass: 'animate-hero-float-1',
-      animationDelay: '1.1s',
+      animationDelay: '2.1s',
+    },
+    // 9. YouTube (Moved up & inward on Right Flank)
+    {
+      id: 'youtube',
+      name: 'YouTube',
+      category: 'Long-Form & Pods',
+      component: YouTubeIcon,
+      position: 'right-[9%] sm:right-[10%] lg:right-[10%] xl:right-[11%] top-[37%] lg:top-[31%]',
+      sizeClasses: 'w-8 h-8 sm:w-9 sm:h-9',
+      iconSizeClasses: 'w-4 h-4',
+      animationClass: 'animate-hero-float-3',
+      animationDelay: '3.7s',
+      hideOnMobile: true,
     },
     // 10. Vibe Coding Capsule (Lower Right Flank)
     {
@@ -221,34 +194,8 @@ export const FloatingHeroIcons: React.FC = () => {
       sizeClasses: 'h-9 sm:h-10 px-3',
       iconSizeClasses: 'w-4 h-4',
       animationClass: 'animate-hero-float-2',
-      animationDelay: '2.5s',
+      animationDelay: '2.8s',
       badgeContent: 'vibe:coding',
-    },
-    // 11. TikTok & Shorts (Left flank floating)
-    {
-      id: 'tiktok',
-      name: 'TikTok & Shorts',
-      category: 'Viral Vertical Video',
-      component: TikTokIcon,
-      position: 'left-[1%] sm:left-[3%] top-[49%]',
-      sizeClasses: 'w-8 h-8 sm:w-9 sm:h-9',
-      iconSizeClasses: 'w-4 h-4',
-      animationClass: 'animate-hero-float-3',
-      animationDelay: '3.6s',
-      hideOnMobile: true,
-    },
-    // 12. YouTube (Right flank floating)
-    {
-      id: 'youtube',
-      name: 'YouTube',
-      category: 'Long-Form & Pods',
-      component: YouTubeIcon,
-      position: 'right-[1%] sm:right-[3%] top-[49%]',
-      sizeClasses: 'w-8 h-8 sm:w-9 sm:h-9',
-      iconSizeClasses: 'w-4 h-4',
-      animationClass: 'animate-hero-float-1',
-      animationDelay: '4.2s',
-      hideOnMobile: true,
     },
   ];
 

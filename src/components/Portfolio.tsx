@@ -243,15 +243,6 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onSelectProject, onOpenBoo
                         className="pointer-events-none block w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
 
-                      {/* Pill Badge overlay on image for Cards and Pack view */}
-                      {(view === 'card' || view === 'pack') && (
-                        <div className="absolute top-3 left-3 flex items-center gap-2">
-                          <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/75 text-white backdrop-blur-md">
-                            {item.category}
-                          </span>
-                        </div>
-                      )}
-
                       {/* Click overlay indicator */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-end p-3">
                         <span className="text-white text-xs font-bold inline-flex items-center gap-1 bg-white/20 backdrop-blur-md px-2.5 py-1 rounded-full">
@@ -275,21 +266,11 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onSelectProject, onOpenBoo
                           <span className="text-xs font-bold text-[#9929ea] tracking-wide uppercase">
                             {item.client}
                           </span>
-                          <span className="text-[11px] font-mono text-slate-400 font-bold">
-                            0{index + 1}
-                          </span>
                         </div>
 
-                        <h3 className="text-base sm:text-lg font-bold text-slate-900 leading-snug tracking-tight group-hover:text-[#ff5fcf] transition-colors truncate mb-2">
+                        <h3 className="text-base sm:text-lg font-bold text-slate-900 leading-snug tracking-tight group-hover:text-[#ff5fcf] transition-colors truncate">
                           {item.title}
                         </h3>
-
-                        <div className="flex items-center justify-end gap-2 pt-2 border-t border-slate-100">
-                          <span className="text-xs font-bold text-slate-900 group-hover:text-[#ff5fcf] inline-flex items-center gap-1 transition-colors">
-                            <span>Explore</span>
-                            <ArrowUpRight className="w-3.5 h-3.5 text-[#ff5fcf]" />
-                          </span>
-                        </div>
                       </motion.div>
                     )}
 

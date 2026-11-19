@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { motion } from 'motion/react';
 import {
   ArrowUpRight,
@@ -45,6 +45,7 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const [dragOffset, setDragOffset] = useState<number>(0);
+  const lastHoverTriggerPosRef = useRef<{ x: number; y: number; at: number } | null>(null);
 
   const totalCards = SERVICES_DATA.length;
 
@@ -57,8 +58,44 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
     [totalCards]
   );
 
+  const handleHeaderHover = useCallback(
+    (index: number, isTop: boolean, e: React.MouseEvent<HTMLDivElement>) => {
+      if (isTop) return;
+      const now = Date.now();
+      const prev = lastHoverTriggerPosRef.current;
+      if (prev) {
+        const dx = e.clientX - prev.x;
+        const dy = e.clientY - prev.y;
+        const distSq = dx * dx + dy * dy;
+        const elapsed = now - prev.at;
+        // Ignore synthetic mouseenter or tiny cursor drift in the same slot while cards roll
+        if (distSq === 0 || (elapsed < 380 && distSq <= 144)) return;
+      }
+      lastHoverTriggerPosRef.current = { x: e.clientX, y: e.clientY, at: now };
+      goTo(index);
+    },
+    [goTo]
+  );
+
   const handleNext = useCallback(() => goTo(activeIndex + 1), [activeIndex, goTo]);
   const handlePrev = useCallback(() => goTo(activeIndex - 1), [activeIndex, goTo]);
+
+  // Auto-play: bring the card behind to the front every 5 seconds (pauses on hover)
+  useEffect(() => {
+    if (totalCards <= 1 || isHovered) return;
+    if (
+      typeof window !== 'undefined' &&
+      window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+    ) {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      setActiveIndex((prev) => (prev + 1) % totalCards);
+    }, 5000);
+
+    return () => window.clearTimeout(timer);
+  }, [activeIndex, isHovered, totalCards]);
 
   // Keyboard navigation on container
   const handleKeyDown = useCallback(
@@ -110,7 +147,10 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
           <div
             className="w-full relative flex items-end justify-center transition-all duration-300 h-[520px] sm:h-[460px]"
             onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onMouseLeave={() => {
+              setIsHovered(false);
+              lastHoverTriggerPosRef.current = null;
+            }}
           >
             {SERVICES_DATA.map((service, index) => {
               const relativePosition = (index - activeIndex + totalCards) % totalCards;
@@ -147,17 +187,8 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
                     y: -desktopOffsets[relativePosition],
                     width: desktopWidths[relativePosition],
                     rotate: isTop ? dragOffset * 0.03 : 0,
-                    zIndex: zIndex,
                     opacity: 1,
                   }}
-                  whileHover={
-                    !isTop
-                      ? {
-                          y: -desktopOffsets[relativePosition] - 12,
-                          transition: { type: 'spring', stiffness: 450, damping: 25 },
-                        }
-                      : {}
-                  }
                   whileTap={isTop ? { scale: 0.995 } : { scale: 0.98 }}
                   transition={springConfig}
                   style={{
@@ -166,6 +197,7 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
                     left: 0,
                     right: 0,
                     margin: '0 auto',
+                    zIndex,
                     transformOrigin: 'bottom center',
                     willChange: 'transform, width',
                   }}
@@ -177,6 +209,8 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
                 >
                   {/* Solid Opaque Frosted Card Header (Tab) */}
                   <div
+                    onMouseEnter={(e) => handleHeaderHover(index, isTop, e)}
+                    onMouseMove={(e) => handleHeaderHover(index, isTop, e)}
                     className={`h-13 px-4 sm:px-6 flex items-center justify-between border-b select-none transition-colors duration-200 shrink-0 ${
                       isTop
                         ? 'bg-[#fafaf8] border-slate-200/90'
@@ -205,7 +239,7 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
                       </span>
                       {!isTop && (
                         <span className="text-[10px] text-[#9929ea] font-semibold hidden sm:inline-block">
-                          Click to bring front
+                          Hover to bring front
                         </span>
                       )}
                     </div>
@@ -218,7 +252,7 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
                     }`}
                   >
                     {/* Left: Text & Deliverables */}
-                    <div className="flex-1 flex flex-col justify-between">
+                    <div className="flex-1 flex flex-col justify-center">
                       <div>
                         <h3 className="text-lg sm:text-2xl font-sans font-bold text-slate-900 tracking-tight leading-snug mb-2">
                           {service.title}
@@ -228,7 +262,7 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
                         </p>
 
                         {/* Quick Deliverable Tags */}
-                        <div className="space-y-1.5 mb-4">
+                        <div className="space-y-1.5">
                           {service.deliverables.slice(0, 3).map((item, dIdx) => (
                             <div
                               key={dIdx}
@@ -239,25 +273,6 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
                             </div>
                           ))}
                         </div>
-                      </div>
-
-                      {/* Card Bottom CTA */}
-                      <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            onSelectService(service);
-                          }}
-                          className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-900 hover:text-[#ff5fcf] transition-colors group/btn cursor-pointer py-1"
-                        >
-                          <span>Explore Deliverables</span>
-                          <ArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 text-[#ff5fcf]" />
-                        </button>
-
-                        <span className="text-[11px] font-mono text-slate-500 font-medium bg-slate-100 px-2 py-0.5 rounded-md">
-                          {service.timeline}
-                        </span>
                       </div>
                     </div>
 

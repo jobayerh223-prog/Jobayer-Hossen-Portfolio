@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useLayoutEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowUpRight, Clock, ChevronDown, Sparkles, BookOpen, Layers, Search, Check } from 'lucide-react';
+import { ArrowUpRight, Clock, ChevronDown, Sparkles, BookOpen, Search, Check } from 'lucide-react';
 import { BLOG_POSTS, type BlogPostItem } from '../data/portfolioData.ts';
 
 interface BlogSectionProps {
@@ -366,18 +366,6 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onSelectPost }) => {
                 />
               ))}
             </div>
-          </div>
-
-          {/* Interactive Stack Hint indicator */}
-          <div className="flex items-center justify-center gap-2 text-xs font-medium text-slate-400 -mt-2 mb-6">
-            <Layers className="w-3.5 h-3.5 text-[#ff5fcf]" />
-            <span>
-              {isExpanded
-                ? 'Click any card to read full article'
-                : isMobile
-                ? 'Tap deck to fan out articles'
-                : 'Hover deck to fan out articles'}
-            </span>
           </div>
         </div>
 

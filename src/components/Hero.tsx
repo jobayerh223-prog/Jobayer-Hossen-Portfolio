@@ -4,6 +4,7 @@ import { BRAND_INFO } from '../data/portfolioData.ts';
 import { Ripple } from './magicui/ripple.tsx';
 import { BookCallButton } from './BookCallButton.tsx';
 import { FloatingHeroIcons } from './FloatingHeroIcons.tsx';
+import { AnimatedNumber } from './AnimatedNumber.tsx';
 
 interface HeroProps {
   onOpenBooking: () => void;
@@ -168,33 +169,41 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onExplorePortfolio })
       <div className="relative z-10 max-w-5xl mx-auto w-full pt-1.5 pb-1 border-t border-slate-200/60 shrink-0">
         <div className="grid grid-cols-4 gap-2 sm:gap-4 text-center items-center">
           <div>
-            <span className="block text-base sm:text-xl font-sans font-black text-slate-900">
-              {BRAND_INFO.stats.projectsCompleted}
-            </span>
+            <AnimatedNumber
+              value={BRAND_INFO.stats.projectsCompleted}
+              trigger="mount"
+              className="block text-base sm:text-xl font-sans font-black text-slate-900"
+            />
             <span className="text-[10px] sm:text-xs font-medium text-slate-500 block truncate">
               Projects Delivered
             </span>
           </div>
           <div>
-            <span className="block text-base sm:text-xl font-sans font-black text-slate-900">
-              {BRAND_INFO.stats.organicImpressions}
-            </span>
+            <AnimatedNumber
+              value={BRAND_INFO.stats.organicImpressions}
+              trigger="mount"
+              className="block text-base sm:text-xl font-sans font-black text-slate-900"
+            />
             <span className="text-[10px] sm:text-xs font-medium text-slate-500 block truncate">
               Organic Reach
             </span>
           </div>
           <div>
-            <span className="block text-base sm:text-xl font-sans font-black text-slate-900">
-              {BRAND_INFO.stats.industriesCovered}
-            </span>
+            <AnimatedNumber
+              value={BRAND_INFO.stats.industriesCovered}
+              trigger="mount"
+              className="block text-base sm:text-xl font-sans font-black text-slate-900"
+            />
             <span className="text-[10px] sm:text-xs font-medium text-slate-500 block truncate">
               Brands Scaled
             </span>
           </div>
           <div>
-            <span className="block text-base sm:text-xl font-sans font-black text-[#ff5fcf]">
-              {BRAND_INFO.stats.averageRating}
-            </span>
+            <AnimatedNumber
+              value={BRAND_INFO.stats.averageRating}
+              trigger="mount"
+              className="block text-base sm:text-xl font-sans font-black text-[#ff5fcf]"
+            />
             <span className="text-[10px] sm:text-xs font-medium text-slate-500 block truncate">
               Client Rating
             </span>

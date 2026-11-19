@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { BRAND_INFO } from '../data/portfolioData.ts';
+import { AnimatedNumber } from './AnimatedNumber.tsx';
 
 interface WhyHireMeProps {
   onOpenBooking: () => void;
@@ -82,17 +83,21 @@ export const WhyHireMe: React.FC<WhyHireMeProps> = ({ onOpenBooking }) => {
             {/* Key Stats Row (Matching Mockup: 600+ Project Completed / 50+ Industry Covered) */}
             <div className="pt-4 grid grid-cols-2 gap-8 border-y border-slate-200 py-6">
               <div>
-                <span className="block text-4xl sm:text-5xl font-display font-black text-slate-900 tracking-tight">
-                  {BRAND_INFO.stats.projectsCompleted}
-                </span>
+                <AnimatedNumber
+                  value={BRAND_INFO.stats.projectsCompleted}
+                  trigger="inView"
+                  className="block text-4xl sm:text-5xl font-display font-black text-slate-900 tracking-tight"
+                />
                 <span className="text-sm font-semibold text-slate-500 uppercase tracking-wider block mt-1">
                   Projects Completed
                 </span>
               </div>
               <div>
-                <span className="block text-4xl sm:text-5xl font-display font-black text-slate-900 tracking-tight">
-                  {BRAND_INFO.stats.industriesCovered}
-                </span>
+                <AnimatedNumber
+                  value={BRAND_INFO.stats.industriesCovered}
+                  trigger="inView"
+                  className="block text-4xl sm:text-5xl font-display font-black text-slate-900 tracking-tight"
+                />
                 <span className="text-sm font-semibold text-slate-500 uppercase tracking-wider block mt-1">
                   Industries Covered
                 </span>

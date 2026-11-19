@@ -71,8 +71,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
           href="#home"
           className="flex items-center gap-2.5 text-slate-900 whitespace-nowrap shrink-0 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff5fcf] rounded-full"
         >
-          <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#9929ea] to-[#ff5fcf] flex items-center justify-center font-bold text-white shadow-sm text-sm group-hover:scale-105 transition-transform">
-            J
+          <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#9929ea] to-[#ff5fcf] overflow-hidden flex items-center justify-center shadow-sm ring-1 ring-white/80 group-hover:scale-105 transition-transform shrink-0">
+            <img
+              src="/assets/aistudio/image_5c88b4ea.png"
+              alt="Jobayer Hossen Logo"
+              className="w-full h-full object-cover object-top"
+              referrerPolicy="no-referrer"
+            />
           </div>
           <span className="font-display font-black text-lg tracking-tight text-slate-900 group-hover:text-[#9929ea] transition-colors">
             {BRAND_INFO.name}
